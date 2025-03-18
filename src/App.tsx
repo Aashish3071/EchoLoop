@@ -11,6 +11,7 @@ import Create from "./pages/Create";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
+// Create a new query client
 const queryClient = new QueryClient();
 
 const App = () => (
