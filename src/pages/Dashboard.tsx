@@ -8,11 +8,10 @@ import {
   Users, 
   Clock, 
   BarChart3, 
-  ArrowUpRight, 
+  ChevronRight,
   Video,
   FileText,
-  Network,
-  ChevronRight
+  Network
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -22,12 +21,20 @@ import BadgeCustom from '@/components/ui/badge-custom';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { toast } from '@/components/ui/use-toast';
 
 const Dashboard = () => {
   const isMobile = useIsMobile();
   
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Display a welcome toast when dashboard loads
+    toast({
+      title: "Welcome to EchoLoop",
+      description: "Your learning dashboard is ready",
+      duration: 3000,
+    });
   }, []);
 
   const containerVariants = {
@@ -66,7 +73,7 @@ const Dashboard = () => {
             <motion.div variants={itemVariants} className="mb-8">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div>
-                  <h1 className="text-3xl font-bold text-echo-black">Welcome back, User</h1>
+                  <h1 className="text-3xl font-bold text-echo-black">Welcome to EchoLoop!</h1>
                   <p className="text-echo-gray mt-1">Track your progress and continue learning</p>
                 </div>
                 
