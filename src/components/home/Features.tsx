@@ -6,8 +6,8 @@ import { Check, Brain, Users, Trophy, Infinity, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 // Install framer-motion
-import { lov-add-dependency } from "framer-motion@latest";
-import { lov-add-dependency } from "react-intersection-observer@latest";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FeatureCard = ({ 
   icon, 
